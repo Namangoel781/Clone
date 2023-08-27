@@ -1,0 +1,59 @@
+{% extends 'base.html' %} 
+
+{% block body %}
+
+<style>
+  .c{
+    padding-top: 84px;
+  }
+  .content img{
+    height: 171px;
+    width: 171px;
+    left: 50px;
+    position: relative;
+    
+  }
+  .card-body button{
+    left: 69px;
+    position: relative;
+    top: 40px;
+  }
+</style>
+  
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="c">
+      <div class="content">
+        <img src="../static/image/invoice.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- <h5 class="card-title"></h5> -->
+         <a href="{% url 'addInvoice' %}"><button type="button" class="btn btn-primary">Add Invoice</button></a> 
+        </div>
+      </div>
+    </div>
+    <div class="c">
+      <div class="content">
+        <img src="../static/image/service.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- <h5 class="card-title"></h5> -->
+          <a href="{% url 'company' %}"><button type="button" class="btn btn-primary">Service Provider</button></a>        </div>
+      </div>
+    </div>
+    <div class="c">
+      <div class="content">
+        <img src="../static/image/review.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- <h5 class="card-title"></h5> -->
+          <a href="{% url 'all_list' %}"><button type="button" class="btn btn-primary">Service Provider</button></a>        </div>
+      </div>
+    </div>
+    <div class="c">
+      <div class="content">
+        <img src="../static/image/bills.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- <h5 class="card-title"></h5> -->
+          <a href="{% url 'report_client' %}"><button type="button" class="btn btn-primary">Service Provider</button></a>        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock body %}

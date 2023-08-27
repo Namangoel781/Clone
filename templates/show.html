@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h4 class="alert my-2 alert-primary text-center">All Client Details</h4>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <h4 class="alert my-2 alert-primary">Client Details</h4>
+
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="col">ID</th>
+            <td>{{show_list.id}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Company Name</th>
+            <td>{{show_list.company_name}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Gst Number</th>
+            <td>{{show_list.gst_number}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Country</th>
+            <td>{{show_list.country}}</td>
+          </tr>
+          <tr>
+            <th scope="col">State</th>
+            <td>{{show_list.state}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Address</th>
+            <td>{{show_list.address}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Created At</th>
+            <td>{{show_list.created_at}}</td>
+          </tr>
+
+      </table>
+    </div>
+    <div class="col">
+      <h4 class="alert my-2 alert-primary">Service Provider Details</h4>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="col">ID</th>
+            <td>{{show_list.id}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Company Name</th>
+            <td>{{show_list.company_name}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Handle By</th>
+            <td>{{show_list.gst_number}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Bank Name</th>
+            <td>{{show_list.country}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Account No.</th>
+            <td>{{show_list.state}}</td>
+          </tr>
+          <tr>
+            <th scope="col">IFSC Code</th>
+            <td>{{show_list.address}}</td>
+          </tr>
+          <tr>
+            <th scope="col">GST No.</th>
+            <td>{{show_list.created_at}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Created At</th>
+            <td>{{show_list.created_at}}</td>
+          </tr>
+
+      </table>
+    </div>
+
+  </div>
+</div>
+{% include 'show_service.html' %}
+
+
+<div class="col-6">
+  <a href="{% url 'all_list' %}"><h4 class="btn btn-primary translate-middle  btn-sm">Go Back</h4></a>                  
+</div>
+
+{% endblock body %}

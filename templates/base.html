@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/static/css/bootstrap.css' %}" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+
+    <style>
+      .container-fluid{
+        background: #ff9f76;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #b20a2c, #ff9f76);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #b20a2c, #ff9f76); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+        height: 89px;
+      }
+      .container-fluid a{
+        color: rgb(255, 243, 223);
+        font-weight: 600;
+        font-size: 35px;
+      }
+      body{
+        background: #FFEFBA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      }
+    </style>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <a href="/home/" class="navbar-brand">Invoice</a>
+        <div class="d-flex" role="search">
+          
+          <a href="/logout/"><button class="btn btn-outline-success" type="logout">Logout</button></a>
+        </div>
+      </div>
+    </nav>
+    {% block body %} {% endblock body %}
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/poper.js"></script>
+    <script src="/static/js/jquery.js"></script>
+  </body>
+</html>
